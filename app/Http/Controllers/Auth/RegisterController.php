@@ -65,6 +65,12 @@ class RegisterController extends Controller
         return substr(str_shuffle($str_result), 0, $length_of_string);
     }
 
+    protected static function random_strings2($length_of_string)
+    {
+        $str_result = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqurtuvwxyz&';
+        return substr(str_shuffle($str_result), 0, $length_of_string);
+    }
+
     /**
      * Create a new user instance after a valid registration.
      *
@@ -77,7 +83,7 @@ class RegisterController extends Controller
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'uid' => $uid,
+            'uid' => self::random_strings2(100),
             'password' => Hash::make($data['password']),
             'phone' => $data['phone_number'],
             'role' => $data['role']

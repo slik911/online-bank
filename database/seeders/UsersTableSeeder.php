@@ -13,12 +13,19 @@ class UsersTableSeeder extends Seeder
      *
      * @return void
      */
+
+    protected static function random_strings($length_of_string)
+    {
+        $str_result = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqurtuvwxyz&';
+        return substr(str_shuffle($str_result), 0, $length_of_string);
+    }
+
     public function run()
     {
         $data = [
             'name' => 'Administrator',
             'email' => 'admin@gmail.com',
-            'uid' => Hash::make('admin@gmail.com'),
+            'uid' => self::random_strings(100),
             'password' => Hash::make('password'),
             'phone_number' => '+2348107215634',
             'role' =>'admin',
