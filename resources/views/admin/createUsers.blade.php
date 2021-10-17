@@ -77,7 +77,7 @@ New User
                      <div class="mb-3">
                         <label for="pin">Transaction Pin</label>
                         <div class="input-group" id="pin">
-                            <input type="text" class="form-control" placeholder="Four Digit Pin"
+                            <input type="text" id="pin" class="form-control" placeholder="Four Digit Pin"
                                 name="pin" autofocus >
                         </div>
                     </div>
