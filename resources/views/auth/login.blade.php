@@ -78,7 +78,7 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>Login | HSB Online Banking</title>
+        <title>Login | Turkiye Kredi-Bank</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Online Banking, Deposits, Transfers, Savings and Loans" name="description" />
         <meta content="HSB" name="author" />
@@ -95,7 +95,7 @@
     </head>
 
     <body>
-
+        @include('sweetalert::alert')
         <div class="account-pages my-5 pt-sm-5">
             <div class="container">
                 <div class="row justify-content-center">

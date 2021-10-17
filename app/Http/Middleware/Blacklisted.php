@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class Blacklisted
 {
@@ -17,8 +18,11 @@ class Blacklisted
     public function handle($request, Closure $next)
     {
         if (Auth::user()->status == false) {
+
+            // Alert::error('Account Suspended');
             Auth::logout();
-            return redirect()->route('login')->withError('Sorry, this account has been suspended');
+            Alert::error('Account Suspended');
+            return redirect()->route('login')->with('error','Sorry, this account has been suspended');
         }
         return $next($request);
     }

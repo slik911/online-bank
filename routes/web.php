@@ -26,7 +26,7 @@ Route::get('/index', [App\Http\Controllers\HomeController::class, 'index'])->nam
 
 Route::post('/change/user/pin', [App\Http\Controllers\UserController::class, 'updatePin'])->name('pin.change')->middleware('user');
 
-Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'usersIndex'])->name('users.dashboard')->middleware('user');
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'usersIndex'])->name('users.dashboard')->middleware('user', 'blacklisted');
 
 Route::get('/profile', [App\Http\Controllers\UserController::class, 'profile'])->name('profile')->middleware('auth');
 
