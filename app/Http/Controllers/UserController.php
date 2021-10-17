@@ -99,6 +99,7 @@ class UserController extends Controller
         $validator = Validator::make($request->all(), [
             'pin' => 'required',
         ]);
+
         if($validator->fails()){
             $request->session()->flash('errors', $validator->errors());
             return redirect()->back();
@@ -136,16 +137,16 @@ class UserController extends Controller
     protected function createuser(Request $request)
     {
         // dd('ok');
-       $data = Validator::make($request->all(), [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8'],
-            'phone_number' => ['required'],
-            'pin' => ['required'|'max:4'],
-            'role' => ['nullable'],
+       $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:8',
+            'phone_number' => 'required',
+            'pin' => 'required|max:4',
+            'role' => 'nullable',
         ]);
-        if($data->fails()){
-            return redirect()->back()->with('errors', $data->errors());
+        if($validator->fails()){
+            return redirect()->back()->with('errors', $validator->errors());
         }
         else{
             $uid = Hash::make($request->email);
