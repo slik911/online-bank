@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddPinToUsersTable extends Migration
+class UserAccounts extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,13 @@ class AddPinToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('pin')->after('password');
+        Schema::create('user_accounts', function (Blueprint $table) {
+            $table->id();
+            $table->string('user_id');
+            $table->string('account_number');
+            $table->string('balance');
+            $table->boolean('visibility')->default(false);
+            $table->timestamps();
         });
     }
 
@@ -25,8 +30,6 @@ class AddPinToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('pin');
-        });
+        //
     }
 }

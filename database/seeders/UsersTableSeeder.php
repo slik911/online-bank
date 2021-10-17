@@ -25,6 +25,6 @@ class UsersTableSeeder extends Seeder
             'pin' => Hash::make('2524')
         ];
 
-        DB::table('goal_savings_set')->insert($data);
+        DB::table('users')->insert($data);
     }
 }
