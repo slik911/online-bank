@@ -20,9 +20,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth', 'blacklisted');
 
-Route::get('/index', [App\Http\Controllers\HomeController::class, 'index'])->name('index')->middleware('auth');
+Route::get('/index', [App\Http\Controllers\HomeController::class, 'index'])->name('index')->middleware('auth', 'blacklisted');
 
 Route::post('/change/user/pin', [App\Http\Controllers\UserController::class, 'updatePin'])->name('pin.change')->middleware('user');
 

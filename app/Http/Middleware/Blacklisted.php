@@ -16,7 +16,7 @@ class Blacklisted
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::user()->status == true) {
+        if (Auth::user()->status == false) {
             Auth::logout();
             return redirect()->route('login')->withError('Sorry, this account has been suspended');
         }

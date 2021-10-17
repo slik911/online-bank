@@ -24,10 +24,10 @@
             <div class="card-body">
                 <div class="container-fluid">
                     <div class="row">
-                        <h4 class="card-title mb-4">Change User Profile</h4>
+                        <h4 class="card-title mb-4">Change User Ppprofile</h4>
                         <form method="post" action="{{route('update.profile')}}">
                             @csrf
-                            <input type="hidden" class="form-control" id="formrow-firstname-input" name="uid" value="{{$user->uid}}">
+                            <input type="hidden" class="form-control" name="uid" value="{{$user->uid}}">
                             <div class="mb-3">
                                 <label for="formrow-firstname-input" class="form-label">Full name</label>
                                 <input type="text" class="form-control" id="formrow-firstname-input" name="name" value="{{$user->name}}">

@@ -59,7 +59,11 @@ class UserController extends Controller
             return redirect()->back();
         }
         else{
-            $users = DB::table('users')->where('uid', $request->uid)->update(['name'=>$request->name,  'phone_number'=>$request->phone_number]);
+            $users = User::where('uid', $request->uid)->first();
+            $users->name = $request->name;
+            $users->phone_number = $request->phone_number;
+            $users->save();
+
             if($users)
             {
                 Alert::success( 'Changes saved successfully');
@@ -158,7 +162,8 @@ class UserController extends Controller
                 'password' => Hash::make($request->password),
                 'phone_number' => $request->phone_number,
                 'role' =>$request->role,
-                'pin' => Hash::make($request->pin)
+                'pin' => Hash::make($request->pin),
+                'created_at'=>Carbon::now(), 'updated_at'=>Carbon::now()
             ]);
 
             DB::table('user_accounts')->insert(['user_id'=>$uid, 'account_number'=>self::random_strings(10), 'balance'=> 0, 'created_at'=>Carbon::now(), 'updated_at'=>Carbon::now()]);
