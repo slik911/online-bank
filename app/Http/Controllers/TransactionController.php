@@ -29,7 +29,7 @@ class TransactionController extends Controller
                     return redirect()->back();
                 }
                 else{
-                    if(DB::table('settings')->where('id', 1)->where('transfer_limit', true)->exists()){
+                    if(DB::table('settings')->where('id', 1)->where('daily_limit', true)->exists()){
                         Alert::error('Transfer Limit Exceeded');
                         return redirect()->back();
                     }
