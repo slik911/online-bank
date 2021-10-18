@@ -40,8 +40,8 @@ class UserController extends Controller
 
 
 
-    public function changeUserStatus(Request $request){
-        $user = User::where('uid', $request->user_id)->first();
+    public function changeUserStatus($uid){
+        $user = User::where('uid', $uid)->first();
         $user->status = !$user->status;
         $user->save();
 

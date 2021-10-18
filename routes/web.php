@@ -33,7 +33,7 @@ Route::get('/profile', [App\Http\Controllers\UserController::class, 'profile'])-
 Route::get('/users', [App\Http\Controllers\UserController::class, 'users'])->name('users')->middleware('admin');
 Route::post('/register/users', [App\Http\Controllers\UserController::class, 'createUser'])->name('register.users')->middleware('admin');
 Route::get('/edit/users', [App\Http\Controllers\UserController::class, 'edit'])->name('edit.user')->middleware('admin');
-Route::post('/change/user/status', [App\Http\Controllers\UserController::class, 'changeUserStatus'])->name('change_user_status')->middleware('admin');
+Route::get('/change/user/status/{uid}', [App\Http\Controllers\UserController::class, 'changeUserStatus'])->name('change_user_status')->middleware('admin');
 
 Route::post('/change/user/profile', [App\Http\Controllers\UserController::class, 'updateUserProfile'])->name('update.profile')->middleware('admin');
 Route::post('/change/user/password', [App\Http\Controllers\UserController::class, 'changePassword'])->name('password.change')->middleware('admin');
