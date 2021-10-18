@@ -61,12 +61,12 @@ Users
 
                             <td>
                                 @if ($user->status)
-                                <a href="" class="btn btn-danger btn-sm waves-effect" onclick="event.preventDefault(); document.getElementById('change_user_status').submit();">Block</a>
+                                <a href="" class="btn btn-danger btn-sm waves-effect" onclick="event.preventDefault(); document.getElementByClassName('change_user_status').submit();">Block</a>
                                 @else
-                                <a href ="" class="btn btn-success btn-sm waves-effect" onclick="event.preventDefault(); document.getElementById('change_user_status').submit();">Activate</a>
+                                <a href ="" class="btn btn-success btn-sm waves-effect" onclick="event.preventDefault(); document.getElementByClassName('change_user_status').submit();">Activate</a>
                                 @endif
 
-                                <form action="{{route('change_user_status')}}" id="change_user_status" method="post">
+                                <form action="{{route('change_user_status')}}" class="change_user_status" method="post">
                                 @csrf
                                     <input type="hidden" name="user_id" value="{{$user->uid}}">
                                 </form>
