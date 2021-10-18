@@ -161,7 +161,7 @@ class UserController extends Controller
             return redirect()->back()->with('errors', $validator->errors());
         }
         else{
-            $uid = Hash::make($request->email);
+            // $uid = Hash::make($request->email);
             // dd($uid);
             User::create([
                 'name' => $request->name,
@@ -174,8 +174,8 @@ class UserController extends Controller
                 'created_at'=>Carbon::now(), 'updated_at'=>Carbon::now()
             ]);
 
-            DB::table('user_accounts')->insert(['user_id'=>$uid, 'account_number'=>self::random_strings(10), 'balance'=> 0, 'created_at'=>Carbon::now(), 'updated_at'=>Carbon::now()]);
-            
+            DB::table('user_accounts')->insert(['user_id'=>self::random_strings2(100), 'account_number'=>self::random_strings(10), 'balance'=> 0, 'created_at'=>Carbon::now(), 'updated_at'=>Carbon::now()]);
+
             Alert::success('New user created');
             return redirect()->route('users');
         }
