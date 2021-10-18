@@ -51,6 +51,7 @@ class HomeController extends Controller
     public function usersIndex(){
 
         $account = DB::table('user_accounts')->where('user_id', Auth::user()->uid)->first();
+        dd($account);
         $transaction = DB::table('transactions')->where('uid', Auth::user()->uid)->where('status', false)->latest()->get();
         $total_transaction = DB::table('transactions')->where('uid', Auth::user()->uid)->where('status', false)->sum('amount');
         $credit = DB::table('transactions')->where('type', 'credit')->where('uid', Auth::user()->uid)->where('status', false)->sum('amount');
@@ -97,5 +98,5 @@ class HomeController extends Controller
         return redirect()->back();
      }
 
-    
+
 }

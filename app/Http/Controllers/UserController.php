@@ -175,6 +175,7 @@ class UserController extends Controller
             ]);
 
             DB::table('user_accounts')->insert(['user_id'=>$uid, 'account_number'=>self::random_strings(10), 'balance'=> 0, 'created_at'=>Carbon::now(), 'updated_at'=>Carbon::now()]);
+            
             Alert::success('New user created');
             return redirect()->route('users');
         }
