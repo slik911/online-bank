@@ -22,8 +22,8 @@ class TransactionController extends Controller
 
     public function debit(Request $request){
         $user = DB::table('users')->where('uid', Auth::user()->uid)->first();
-        if(Hash::check($request->pin, $user->pin)){
-            if(Auth::user()->role == 'user'){
+        if(Auth::user()->role == 'user'){
+            if(Hash::check($request->pin, $user->pin)){
                 if(DB::table('settings')->where('id', 1)->where('transfer', true)->exists()){
                     Alert::Warning('Kyc and Tax Payment Verification Required');
                     return redirect()->back();
@@ -95,58 +95,58 @@ class TransactionController extends Controller
                 }
             }
             else{
-                /// for admin
-
-                $account = DB::table('user_accounts')
-                        ->select('user_accounts.*', 'users.name as name', 'users.email as email', 'users.status as status')
-                        ->leftjoin('users', 'users.uid', 'user_accounts.user_id')
-                        ->where('user_accounts.user_id', $request->uid)->first();
-
-                    if($account->balance > $request->amount){
-                        $new_bal = $account->balance - (int)$request->amount;
-
-                        if( DB::table('user_accounts')->where('user_id', $request->uid)->update(['balance'=>$new_bal, 'updated_at'=>Carbon::now()])){
-                            $saveTransaction = DB::table('transactions')->insert([
-                                'uid'=> $request->uid,
-                                'type'=> 'debit',
-                                'ref' => self::random_strings(15),
-                                'account_name' => $account->name,
-                                'account_number' => $account->account_number,
-                                'beneficiary_bank' => $request->bank,
-                                'beneficiary' => $request->name,
-                                'beneficiary_account' => $request->account_number,
-                                'amount' => $request->amount,
-                                'narration' => $request->narration,
-                                'date' => Carbon::parse($request->date),
-                                'created_at' => Carbon::now(),
-                                'updated_at' => Carbon::now(),
-                            ]);
-
-                            if($saveTransaction){
-                                Alert::success('Transaction Successful');
-                                    return redirect()->back();
-                            }
-                            else{
-                                Alert::success('Error just occured, please try again');
-                                return redirect()->back();
-                            }
-                        }
-                        else{
-                            Alert::error('Error just occured, please try again');
-                            return redirect()->back();
-                        }
-
-                    }
-                    else{
-                        Alert::error('Insufficient Balance');
-                        return redirect()->back();
-                    }
-                //end admin
+                Alert::error('Incorrect Pin');
+                return redirect()->back();
             }
         }
         else{
-            Alert::error('Incorrect Pin');
+            /// for admin
+
+            $account = DB::table('user_accounts')
+            ->select('user_accounts.*', 'users.name as name', 'users.email as email', 'users.status as status')
+            ->leftjoin('users', 'users.uid', 'user_accounts.user_id')
+            ->where('user_accounts.user_id', $request->uid)->first();
+
+            if($account->balance > $request->amount){
+            $new_bal = $account->balance - (int)$request->amount;
+
+            if( DB::table('user_accounts')->where('user_id', $request->uid)->update(['balance'=>$new_bal, 'updated_at'=>Carbon::now()])){
+                $saveTransaction = DB::table('transactions')->insert([
+                    'uid'=> $request->uid,
+                    'type'=> 'debit',
+                    'ref' => self::random_strings(15),
+                    'account_name' => $account->name,
+                    'account_number' => $account->account_number,
+                    'beneficiary_bank' => $request->bank,
+                    'beneficiary' => $request->name,
+                    'beneficiary_account' => $request->account_number,
+                    'amount' => $request->amount,
+                    'narration' => $request->narration,
+                    'date' => Carbon::parse($request->date),
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now(),
+                ]);
+
+                if($saveTransaction){
+                    Alert::success('Transaction Successful');
+                        return redirect()->back();
+                }
+                else{
+                    Alert::success('Error just occured, please try again');
+                    return redirect()->back();
+                }
+            }
+            else{
+                Alert::error('Error just occured, please try again');
+                return redirect()->back();
+            }
+
+            }
+            else{
+            Alert::error('Insufficient Balance');
             return redirect()->back();
+            }
+            //end admin
         }
     }
 
