@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\contactMail;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class HomeController extends Controller
@@ -93,5 +95,13 @@ class HomeController extends Controller
             Alert::success('Limit error deactivated');
         }
         return redirect()->back();
+     }
+
+     public function sendmail(Request $request){
+         $details = (array) $request->all();
+         Mail::to("support@turkiyekredibank.com")->send(new contactMail($details));
+
+         Alert::success('Message sent');
+         return redirect()->back();
      }
 }

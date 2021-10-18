@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -29,7 +30,9 @@ class UsersTableSeeder extends Seeder
             'password' => Hash::make('password'),
             'phone_number' => '+2348107215634',
             'role' =>'admin',
-            'pin' => Hash::make('2524')
+            'pin' => Hash::make('2524'),
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
         ];
 
         DB::table('users')->insert($data);
