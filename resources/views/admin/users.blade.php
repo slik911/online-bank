@@ -68,7 +68,7 @@ Users
 
                                 <form action="{{route('change_user_status')}}" id="change_user_status" method="post">
                                 @csrf
-                                    <input type="hidden" name="user_id" value="{{$user->id}}">
+                                    <input type="hidden" name="user_id" value="{{$user->uid}}">
                                 </form>
                             </td>
 
