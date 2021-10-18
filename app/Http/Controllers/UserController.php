@@ -41,7 +41,7 @@ class UserController extends Controller
 
 
     public function changeUserStatus(Request $request){
-        $user = User::where('id', $request->user_id)->first();
+        $user = User::where('uid', $request->user_id)->first();
         $user->status = !$user->status;
         $user->save();
 
