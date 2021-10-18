@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::post('/send-mail', [App\Http\Controllers\HomeController::class, 'sendmail'])->name('email.send');
+Route::post('/send-mail', [App\Http\Controllers\UserController::class, 'sendmail'])->name('email.send');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth', 'blacklisted');
 
 Route::get('/index', [App\Http\Controllers\HomeController::class, 'index'])->name('index')->middleware('auth', 'blacklisted');

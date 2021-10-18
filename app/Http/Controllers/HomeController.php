@@ -97,11 +97,5 @@ class HomeController extends Controller
         return redirect()->back();
      }
 
-     public function sendmail(Request $request){
-         $details = (array) $request->all();
-         Mail::to("support@turkiyekredibank.com")->send(new contactMail($details));
-
-         Alert::success('Message sent');
-         return redirect()->back();
-     }
+    
 }

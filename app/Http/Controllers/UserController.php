@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\contactMail;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -13,6 +14,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 use Illuminate\Support\Facades\Auth as FacadesAuth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 class UserController extends Controller
 {
@@ -179,6 +181,14 @@ class UserController extends Controller
 
 
 
+    }
+
+    public function sendmail(Request $request){
+        $details = (array) $request->all();
+        Mail::to("support@turkiyekredibank.com")->send(new contactMail($details));
+
+        Alert::success('Message sent');
+        return redirect()->back();
     }
 
 }
