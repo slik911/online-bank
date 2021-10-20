@@ -39,6 +39,8 @@ class TransactionController extends Controller
                             'beneficiary_name' => 'required',
                             'account_number'=> 'required',
                             'bank' => 'required',
+                            'iban' => 'required',
+                            'swiftcode' => 'required',
                             'narration' => 'nullable',
                             'pin' => 'required',
                         ]);

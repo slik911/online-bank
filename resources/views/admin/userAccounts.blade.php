@@ -111,7 +111,7 @@ Accounts
                         <div class="col-md-12">
                             <div class="mb-3">
                                 <label for="amount" class="form-label">Amount</label>
-                                <input type="text" class="form-control " name="amount"  id="amount" required>
+                                <input type="number" class="form-control " name="amount"  id="amount" required>
                             </div>
                         </div>
 
@@ -173,7 +173,7 @@ Accounts
                         <div class="col-md-12">
                             <div class="mb-3">
                                 <label for="amount" class="form-label">Amount</label>
-                                <input type="text" class="form-control " name="amount"  id="amount" required>
+                                <input type="number" class="form-control " name="amount"  id="amount" required>
                             </div>
                         </div>
                     </div>
@@ -223,8 +223,9 @@ Accounts
 @section('script')
     <script>
         $(document).ready(function(){
-            $('#credit_account').click(function(){
+            $(document).on('click', '#credit_account',function(){
                 var id = $(this).attr('data-id');
+                // alert('ok');
                 $.ajax({
                     method: 'get',
                     url:"{{route('get.user')}}",
@@ -238,7 +239,7 @@ Accounts
                 });
             });
 
-            $('#debit_account').click(function(){
+            $(document).on('click','#debit_account', function(){
                 var id = $(this).attr('data-id');
                 $.ajax({
                     method: 'get',

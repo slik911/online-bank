@@ -105,24 +105,38 @@
                                     <div class="col-md-12">
                                         <div class="mb-3">
                                             <label for="amount" class="form-label">Amount</label>
-                                            <input type="text" class="form-control " name="amount"  id="amount" required>
+                                            <input type="number" class="form-control " name="amount"  id="amount" required>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="name" class="form-label">Beneficiary </label>
-                                    <input type="text" class="form-control"  id="name"  name="beneficiary_name">
+                                    <input type="text" class="form-control" required  id="name"  name="beneficiary_name">
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="account_number" class="form-label">Beneficiary Account Number</label>
-                                    <input type="text" class="form-control"  id="account_number"  name="account_number" >
+                                    <input type="text" class="form-control" required  id="account_number"  name="account_number" >
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="bank" class="form-label">Bank </label>
-                                    <input type="text" class="form-control"  id="bank"  name="bank">
+                                    <input type="text" class="form-control" required  id="bank"  name="bank">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="iban" class="form-label">IBAN </label>
+                                            <input type="text" class="form-control"  required id="iban"  name="iban">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="swiftcode" class="form-label">Swift Code</label>
+                                            <input type="text" class="form-control"  id="swiftcode"  name="swiftcode" >
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="mb-3">

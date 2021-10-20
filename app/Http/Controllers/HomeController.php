@@ -83,12 +83,13 @@ class HomeController extends Controller
        return redirect()->back();
     }
 
+
     public function daily_limit(){
         $setting = Setting::where('id', 1)->first();
-        $setting->transfer_limit = !$setting->transfer_limit;
+        $setting->daily_limit = !$setting->daily_limit;
         $setting->save();
 
-        if($setting->transfer_limit)
+        if($setting->daily_limit)
         {
             Alert::success('Limit error activated');
         }
@@ -97,6 +98,7 @@ class HomeController extends Controller
         }
         return redirect()->back();
      }
+
 
 
 }
