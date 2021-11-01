@@ -184,7 +184,7 @@ class TransactionController extends Controller
 
 
     public function transactionHistory($uid){
-       $transactions = DB::table('transactions')->orderBy('id', 'desc')->get();
+       $transactions = DB::table('transactions')->where('uid', $uid)->orderBy('id', 'desc')->get();
        return view('admin.transactionHistory', compact('transactions'));
     }
 

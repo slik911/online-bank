@@ -1,76 +1,4 @@
-{{-- @extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection --}}
 
 <!doctype html>
 <html lang="en">
@@ -78,10 +6,10 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>Login | Turkiye Kredi-Bank</title>
+        <title>Login | MillwallBank</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Online Banking, Deposits, Transfers, Savings and Loans" name="description" />
-        <meta content="HSB" name="author" />
+        <meta content="Millwallbank" name="author" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
 
@@ -92,104 +20,119 @@
         <!-- App Css-->
         <link href="{{asset('assets/css/app.min.css')}}" id="app-style" rel="stylesheet" type="text/css" />
 
+        <link rel="stylesheet" href="{{asset('assets/libs/owl.carousel/assets/owl.carousel.min.css')}}">
+
+        <link rel="stylesheet" href="{{asset('assets/libs/owl.carousel/assets/owl.theme.default.min.css')}}">
+
     </head>
 
-    <body>
-        @include('sweetalert::alert')
-        <div class="account-pages my-5 pt-sm-5">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8 col-lg-6 col-xl-5">
-                        <div class="card overflow-hidden">
-                            <div class="bg-primary bg-soft">
-                                <div class="row">
-                                    <div class="col-7">
-                                        <div class="text-primary p-4">
-                                            <h5 class="text-primary">Welcome Back !</h5>
-                                            <p>Online Portal</p>
+    <body class="auth-body-bg">
+        <div>
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+
+                    <div class="col-xl-9">
+                        <div class="auth-full-bg pt-lg-5 p-4">
+                            <div class="w-100">
+                                <div class="bg-overlay"></div>
+                                <div class="d-flex h-100 flex-column">
+                                    <div class="p-4 mt-auto text-white-50">
+                                        <h1 class="text-white display-3 fw-semibold mb-3 hero-title">Banking Made Easy</h1>
+                                        <div class="col-md-6">
+                                            <p class="font-size-14 text-dark">
+                                                Online Banking Tailored to your every need.
+                                                manage your account opening Online - No personal visit required Privacy 100% guaranteed
+                                             </p>
                                         </div>
+
+
                                     </div>
-                                    <div class="col-5 align-self-end">
-                                        <img src="assets/images/profile-img.png" alt="" class="img-fluid">
-                                    </div>
+
                                 </div>
-                            </div>
-                            <div class="card-body pt-0">
-                                <div class="auth-logo">
-                                    <a href="/" class="auth-logo-light">
-                                        <div class="avatar-md profile-user-wid mb-4">
-                                            <span class="avatar-title rounded-circle bg-light">
-                                                <img src="assets/images/logo-light.svg" alt="" class="rounded-circle" height="34">
-                                            </span>
-                                        </div>
-                                    </a>
-
-                                    <a href="/" class="auth-logo-dark">
-                                        <div class="avatar-md profile-user-wid mb-4">
-                                            <span class="avatar-title rounded-circle bg-light">
-                                                <img src="assets/images/logo.svg" alt="" class="rounded-circle" height="34">
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="p-2">
-                                    <form method="POST" action="{{ route('login') }}">
-                                        @csrf
-                                        <div class="mb-3">
-                                            <label for="email" class="form-label">Email</label>
-                                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                            @error('email')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label class="form-label">Password</label>
-                                            <div class="input-group auth-pass-inputgroup">
-                                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Enter password" aria-label="Password" aria-describedby="password-addon">
-                                                <button class="btn btn-light " type="button" id="password-addon"><i class="mdi mdi-eye-outline"></i></button>
-
-                                                @error('password')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div>
-                                        </div>
-
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                            <label class="form-check-label" for="remember">
-                                                Remember me
-                                            </label>
-                                        </div>
-
-                                        <div class="mt-3 d-grid">
-                                            <button class="btn btn-primary waves-effect waves-light" type="submit">Log In</button>
-                                        </div>
-
-
-                                    </form>
-                                </div>
-
                             </div>
                         </div>
-                        <div class="mt-5 text-center">
-
-                            <div>
-                                {{-- <p>Don't have an account ? <a href="auth-register.html" class="fw-medium text-primary"> Signup now </a> </p> --}}
-                                <p>© <script>document.write(new Date().getFullYear())</script> Turkiye Kredi-Bank
-                            </div>
-                        </div>
-
                     </div>
+                    <!-- end col -->
+
+                    <div class="col-xl-3">
+                        <div class="auth-full-page-content p-md-5 p-4">
+                            <div class="w-100">
+
+                                <div class="d-flex flex-column h-100">
+                                    <div class="mb-4 mb-md-5">
+                                        <a href="index.html" class="d-block auth-logo">
+                                            <img src="assets/images/logo-dark.png" alt="" height="18" class="auth-logo-dark">
+                                            <img src="assets/images/logo-light.png" alt="" height="18" class="auth-logo-light">
+                                        </a>
+                                    </div>
+                                    <div class="my-auto">
+
+                                        <div>
+                                            <h5 class="text-primary">Welcome Back !</h5>
+                                            <p class="text-muted">Sign in to continue to Millwallbank.</p>
+                                        </div>
+
+                                        <div class="mt-4">
+                                            <form method="POST" action="{{ route('login') }}">
+                                                @csrf
+                                                <div class="mb-3">
+                                                    <label for="email" class="form-label">Email</label>
+                                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+
+                                                    @error('email')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label class="form-label">Password</label>
+                                                    <div class="input-group auth-pass-inputgroup">
+                                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Enter password" aria-label="Password" aria-describedby="password-addon">
+                                                        <button class="btn btn-light " type="button" id="password-addon"><i class="mdi mdi-eye-outline"></i></button>
+
+                                                        @error('password')
+                                                            <span class="invalid-feedback" role="alert">
+                                                                <strong>{{ $message }}</strong>
+                                                            </span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                                    <label class="form-check-label" for="remember">
+                                                        Remember me
+                                                    </label>
+                                                </div>
+
+                                                <div class="mt-3 d-grid">
+                                                    <button class="btn btn-primary waves-effect waves-light" type="submit">Log In</button>
+                                                </div>
+
+
+                                            </form>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-4 mt-md-5 text-center">
+                                        <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> Millwallbank</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col -->
                 </div>
+                <!-- end row -->
             </div>
+            <!-- end container-fluid -->
         </div>
-        <!-- end account-pages -->
+
 
         <!-- JAVASCRIPT -->
         <script src="{{asset('assets/libs/jquery/jquery.min.js')}}"></script>
@@ -197,10 +140,22 @@
         <script src="{{asset('assets/libs/metismenu/metisMenu.min.js')}}"></script>
         <script src="{{asset('assets/libs/simplebar/simplebar.min.js')}}"></script>
         <script src="{{asset('assets/libs/node-waves/waves.min.js')}}"></script>
-
+        <script src="{{asset('assets/libs/owl.carousel/owl.carousel.min.js')}}"></script>
 
         <!-- App js -->
         <script src="{{asset('assets/js/app.js')}}"></script>
+
+        <script>
+            $(document).ready(function(){
+                $('#auth-review-carousel').owlCarousel({
+                    items: 1,
+                    loop: false,
+                    margin: 16,
+                    nav: false,
+                    dots: true,
+                });
+            });
+        </script>
 
     </body>
 </html>

@@ -4,7 +4,7 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>Turkiye Kredi-Bank</title>
+        <title>Millwallbank</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -183,11 +183,11 @@
                     <div class="col-lg-5">
 
                         <div class="text-muted">
-                            <h4>Turkiye <span class="text-info">Kredi-Bank</span></h4>
-                            <p>We offer you a secure bank account in Turkey. We have been successfully involved in the business of arranging Offshore bank accounts and credit cards for years. We open many accounts every year and are intimately acquainted with the banking system in Turkey.
+                            <h4>Bluewall <span class="text-info">National Bank</span></h4>
+                            <p>We offer you a secure bank account. We have been successfully involved in the business of arranging Offshore bank accounts and credit cards for years. We open many accounts every year and are intimately acquainted with the banking system all over the world.
                             </p>
                             <p>
-                                As Turkiye Kredi-Bank grows, it is maintaining its identity as a strong, full-service Offshore banking. We offer a range of checking and savings products for both consumer and business customers. Other popular products include competitive mortgages, home equity lines of credit and consumer and business loans. The Trust and Wealth Management division rounds out the financial offerings available for individuals, families and businesses.</p>
+                                As Bluewall National Bank grows, it is maintaining its identity as a strong, full-service Offshore banking. We offer a range of checking and savings products for both consumer and business customers. Other popular products include competitive mortgages, home equity lines of credit and consumer and business loans. The Trust and Wealth Management division rounds out the financial offerings available for individuals, families and businesses.</p>
                             {{-- <p class="mb-4">It would be necessary to have uniform pronunciation.</p> --}}
 {{--
                             <div class="button-items">
@@ -334,10 +334,10 @@
                                 <div class="features-number fw-semibold display-4 me-3">02</div>
                                 <h4 class="mb-0">Internet Banking</h4>
                             </div>
-                            <p class="text-muted">We at Turkiye Kredi-Bank Provide you with user friendly only platform for swift transactions and other services.</p>
+                            <p class="text-muted">We at Bluewall National Bank Provide you with user friendly only platform for swift transactions and other services.</p>
                             <div class="text-muted mt-4">
-                                <p class="mb-2"><i class="mdi mdi-circle-medium text-success me-1"></i>Donec pede justo vel aliquet</p>
-                                <p><i class="mdi mdi-circle-medium text-success me-1"></i>Aenean et nisl sagittis</p>
+                                <p class="mb-2"><i class="mdi mdi-circle-medium text-success me-1"></i>Seamless Transfer</p>
+                                <p><i class="mdi mdi-circle-medium text-success me-1"></i>Virtual Cards</p>
                             </div>
                         </div>
                     </div>
@@ -374,10 +374,10 @@
                             <div class="card-body"  style="background-color: #f8f8fb">
                                 <h3 class="">Contact Details</h3>
                                 <p class="card-title">Address</p>
-                                <p class="text-muted">101, Turkiye Offshore , istanbul, Turkey</p>
+                                <p class="text-muted">101, Fifth Avenue , NA/NY, USA</p>
 
                                 <p class="card-title">Email</p>
-                                <p class="text-muted">support@turkiyekredibank.com</p>
+                                <p class="text-muted">support@bluewallnationalbank.com</p>
 
                             </div>
                         </div>
@@ -505,7 +505,7 @@
                                                                 </a>
                                                                 <div id="general-collapseThree" class="collapse" data-bs-parent="#gen-ques-accordion">
                                                                     <div class="card-body">
-                                                                        <p class="mb-0">No! You need to be 18 years old to open the account. We understand that you may be under 18 and already have an independent financial life, but unfortunately by law Turkiye Offshore Bankasi cannot open accounts for non-residents under 18. The only solution we can offer is to begin the procedure shortly before you turn 18 and open the account on your birthday..</p>
+                                                                        <p class="mb-0">No! You need to be 18 years old to open the account. We understand that you may be under 18 and already have an independent financial life, but unfortunately by law Bluewall national bank cannot open accounts for non-residents under 18. The only solution we can offer is to begin the procedure shortly before you turn 18 and open the account on your birthday..</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -592,7 +592,7 @@
                                 </a>
                                 <a href="javascript: void(0);" class="post">
                                     <div class="badge badge-soft-success font-size-11 mb-3">Finance</div>
-                                    <h5 class="post-title">Turkey Inflation Stakes</h5>
+                                    <h5 class="post-title">Market Inflation </h5>
                                     <p class="mb-0"><i class="bx bx-calendar me-1"></i> 12 Sept, 2021</p>
                                 </a>
 
