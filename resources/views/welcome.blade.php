@@ -4,7 +4,7 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>Millwallbank</title>
+        <title>Turkiye Sedaf Finans</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -29,9 +29,13 @@
         @include('sweetalert::alert')
         <nav class="navbar navbar-expand-lg navigation fixed-top sticky">
             <div class="container">
-                <a class="navbar-logo" href="/">
-                    <img src="assets/images/logo-dark.png" alt="" height="29" class="logo logo-dark">
-                    <img src="assets/images/logo-light.png" alt="" height="29" class="logo logo-light">
+
+                <a class="navbar-logo text-white" href="/" style="font-size:20px; font-weight:500">
+                    <span class="logo logo-light">TURKIYE <span style="color:#556EE6">SEDAF</span> FINANS</span>
+                </a>
+
+                <a class="navbar-logo text-dark " href="/" style="font-size:20px; font-weight:500">
+                    <span class="logo logo-dark">TURKIYE <span style="color:#556EE6">SEDAF</span> FINANS</span>
                 </a>
 
                 <button type="button" class="btn btn-sm px-3 font-size-16 d-lg-none header-item waves-effect waves-light" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
@@ -183,11 +187,11 @@
                     <div class="col-lg-5">
 
                         <div class="text-muted">
-                            <h4>Bluewall <span class="text-info">National Bank</span></h4>
+                            <h4>Turkiye <span style="color:#556EE6">Sedaf</span> Finans</h4>
                             <p>We offer you a secure bank account. We have been successfully involved in the business of arranging Offshore bank accounts and credit cards for years. We open many accounts every year and are intimately acquainted with the banking system all over the world.
                             </p>
                             <p>
-                                As Bluewall National Bank grows, it is maintaining its identity as a strong, full-service Offshore banking. We offer a range of checking and savings products for both consumer and business customers. Other popular products include competitive mortgages, home equity lines of credit and consumer and business loans. The Trust and Wealth Management division rounds out the financial offerings available for individuals, families and businesses.</p>
+                                As Turkiye Sedaf Finans grows, it is maintaining its identity as a strong, full-service Offshore banking. We offer a range of checking and savings products for both consumer and business customers. Other popular products include competitive mortgages, home equity lines of credit and consumer and business loans. The Trust and Wealth Management division rounds out the financial offerings available for individuals, families and businesses.</p>
                             {{-- <p class="mb-4">It would be necessary to have uniform pronunciation.</p> --}}
 {{--
                             <div class="button-items">
@@ -334,7 +338,7 @@
                                 <div class="features-number fw-semibold display-4 me-3">02</div>
                                 <h4 class="mb-0">Internet Banking</h4>
                             </div>
-                            <p class="text-muted">We at Bluewall National Bank Provide you with user friendly only platform for swift transactions and other services.</p>
+                            <p class="text-muted">We at Mogace Bcl Provide you with user friendly only platform for swift transactions and other services.</p>
                             <div class="text-muted mt-4">
                                 <p class="mb-2"><i class="mdi mdi-circle-medium text-success me-1"></i>Seamless Transfer</p>
                                 <p><i class="mdi mdi-circle-medium text-success me-1"></i>Virtual Cards</p>
@@ -374,10 +378,12 @@
                             <div class="card-body"  style="background-color: #f8f8fb">
                                 <h3 class="">Contact Details</h3>
                                 <p class="card-title">Address</p>
-                                <p class="text-muted">101, Fifth Avenue , NA/NY, USA</p>
+                                <p class="text-muted">Ibrahim Aga Sok No 8 Ustbostanci Istanbul
+                                    NA, Ustbostanci, 28393
+                                    Turkey</p>
 
                                 <p class="card-title">Email</p>
-                                <p class="text-muted">support@bluewallnationalbank.com</p>
+                                <p class="text-muted">support@turkiyesedeffinans.com</p>
 
                             </div>
                         </div>
@@ -607,10 +613,12 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="mb-4">
-                            <img src="assets/images/logo-light.png" alt="" height="20">
+                            <a class="navbar-logo text-white" href="/" style="font-size:15px; font-weight:500">
+                                TURKIYE SEDAF FINANS
+                            </a>
                         </div>
 
-                        <p class="mb-2"><script>document.write(new Date().getFullYear())</script> © Turkiye Kredi-Bank</p>
+                        <p class="mb-2"><script>document.write(new Date().getFullYear())</script> © Turkiye Sedaf Finans</p>
 
                     </div>
 

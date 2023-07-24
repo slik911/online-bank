@@ -2,26 +2,20 @@
  <header id="page-topbar">
     <div class="navbar-header">
         <div class="d-flex">
-            <!-- LOGO -->
+            {{-- <!-- LOGO -->
             <div class="navbar-brand-box">
                 <a href="index.html" class="logo logo-dark">
-                    <span class="logo-sm">
-                        <img src="{{asset('assets/images/logo.svg')}}" alt="" height="22">
-                    </span>
-                    <span class="logo-lg">
-                        <img src="{{asset('assets/images/logo-dark.png')}}" alt="" height="17">
-                    </span>
+                    <a class="navbar-logo text-white d-block auth-logo mt-5" href="/" style="font-size:17px; font-weight:500">
+                        <span class="auth-logo-dark">TURKIYE <span style="color:#556EE6">SEDAF</span> FINANS</span>
+                    </a>
                 </a>
 
                 <a href="index.html" class="logo logo-light">
-                    <span class="logo-sm">
-                        <img src="{{asset('assets/images/logo-light.svg')}}" alt="" height="22">
-                    </span>
-                    <span class="logo-lg">
-                        <img src="{{asset('assets/images/logo-light.png')}}" alt="" height="19">
-                    </span>
+                    <a class="navbar-logo text-dark d-block auth-logo mt-5" href="/" style="font-size:17px; font-weight:500">
+                        <span class="auth-logo-light">TURKIYE <span style="color:#556EE6">SEDAF</span> FINANS</span>
+                    </a>
                 </a>
-            </div>
+            </div> --}}
 
             <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
                 <i class="fa fa-fw fa-bars"></i>

@@ -6,7 +6,7 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>Login | MillwallBank</title>
+        <title>Login |  </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Online Banking, Deposits, Transfers, Savings and Loans" name="description" />
         <meta content="Millwallbank" name="author" />
@@ -60,16 +60,20 @@
 
                                 <div class="d-flex flex-column h-100">
                                     <div class="mb-4 mb-md-5">
-                                        <a href="index.html" class="d-block auth-logo">
-                                            <img src="assets/images/logo-dark.png" alt="" height="18" class="auth-logo-dark">
-                                            <img src="assets/images/logo-light.png" alt="" height="18" class="auth-logo-light">
+
+                                        <a class="navbar-logo text-white d-block auth-logo" href="/" style="font-size:20px; font-weight:500">
+                                            <span class="auth-logo-light">TURKIYE <span style="color:#556EE6">SEDAF</span> FINANS</span>
+                                        </a>
+
+                                        <a class="navbar-logo text-dark d-block auth-logo" href="/" style="font-size:20px; font-weight:500">
+                                            <span class="auth-logo-dark">TURKIYE <span style="color:#556EE6">SEDAF</span> FINANS</span>
                                         </a>
                                     </div>
                                     <div class="my-auto">
 
                                         <div>
                                             <h5 class="text-primary">Welcome Back !</h5>
-                                            <p class="text-muted">Sign in to continue to Millwallbank.</p>
+                                            <p class="text-muted">Sign in to continue to Turkiye Sedaf Finans.</p>
                                         </div>
 
                                         <div class="mt-4">
@@ -118,7 +122,7 @@
                                     </div>
 
                                     <div class="mt-4 mt-md-5 text-center">
-                                        <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> Millwallbank</p>
+                                        <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> Turkiye Sedaf Finans</p>
                                     </div>
                                 </div>
 

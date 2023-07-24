@@ -4,7 +4,7 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>@yield('title') | Bluewall National Bank</title>
+        <title>@yield('title') | Turkiye Sedaf Finans</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Online Banking, Deposits, Transfers, Savings and Loans" name="description" />
         <meta content="Bluewall" name="author" />
@@ -21,7 +21,7 @@
         <link href="{{ asset('assets/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
         <link href="{{ asset('assets/css/datatables.min.css') }}" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-  
+
 
         @yield('style')
     </head>
@@ -76,7 +76,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6">
-                                <script>document.write(new Date().getFullYear())</script> © Bluewall National Bank.
+                                <script>document.write(new Date().getFullYear())</script> © Mogace Bcl.
                             </div>
 
                         </div>

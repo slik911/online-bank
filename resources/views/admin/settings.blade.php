@@ -49,7 +49,7 @@ Settings
                                 <div class="row mb-4">
                                     <label for="email" class="col-sm-3 col-form-label">Transfer Limit</label>
                                     <div class="col-sm-9">
-                                        @if (!$setting->transfer_limit)
+                                        @if (!$setting->daily_limit)
                                         <a href="{{route('daily.limit')}}" class="btn btn-primary btn-sm waves-effect">Activate Transfer Limit</a>
                                         @else
                                         <a href ="{{route('daily.limit')}}" class="btn btn-danger btn-sm waves-effect">Deactivate Transfer Limit</a>
