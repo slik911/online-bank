@@ -62,18 +62,18 @@
                                     <div class="mb-4 mb-md-5">
 
                                         <a class="navbar-logo text-white d-block auth-logo" href="/" style="font-size:20px; font-weight:500">
-                                            <span class="auth-logo-light">TURKIYE <span style="color:#556EE6">SEDAF</span> FINANS</span>
+                                            <span class="auth-logo-light">ZERUIT FINANS</span>
                                         </a>
 
                                         <a class="navbar-logo text-dark d-block auth-logo" href="/" style="font-size:20px; font-weight:500">
-                                            <span class="auth-logo-dark">TURKIYE <span style="color:#556EE6">SEDAF</span> FINANS</span>
+                                            <span class="auth-logo-dark">ZERUIT FINANS</span>
                                         </a>
                                     </div>
                                     <div class="my-auto">
 
                                         <div>
                                             <h5 class="text-primary">Welcome Back !</h5>
-                                            <p class="text-muted">Sign in to continue to Turkiye Sedaf Finans.</p>
+                                            <p class="text-muted">Sign in to continue to Zeruit Finans.</p>
                                         </div>
 
                                         <div class="mt-4">
@@ -122,7 +122,7 @@
                                     </div>
 
                                     <div class="mt-4 mt-md-5 text-center">
-                                        <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> Turkiye Sedaf Finans</p>
+                                        <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> Zeruit Finans</p>
                                     </div>
                                 </div>
 

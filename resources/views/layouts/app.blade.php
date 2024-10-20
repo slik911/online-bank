@@ -4,7 +4,7 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>@yield('title') | Turkiye Sedaf Finans</title>
+        <title>@yield('title') | Zeruit Finans</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Online Banking, Deposits, Transfers, Savings and Loans" name="description" />
         <meta content="Bluewall" name="author" />

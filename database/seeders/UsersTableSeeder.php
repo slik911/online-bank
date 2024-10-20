@@ -30,7 +30,7 @@ class UsersTableSeeder extends Seeder
             'password' => Hash::make('password'),
             'phone_number' => '+2348107215634',
             'role' =>'admin',
-            'pin' => Hash::make('2524'),
+            'pin' => Hash::make('1234'),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];

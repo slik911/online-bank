@@ -186,7 +186,7 @@ class UserController extends Controller
 
     public function sendmail(Request $request){
         $details = (array) $request->all();
-        Mail::to("support@turkiyesedeffinans.com")->send(new contactMail($details));
+        Mail::to("support@zeruitfinans.com")->send(new contactMail($details));
         Alert::success('Message sent');
         return redirect()->back();
     }

@@ -4,10 +4,10 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>Turkiye Sedaf Finans</title>
+        <title>Zeruit Finans</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Online Banking, Deposits, Transfers, Savings and Loans" name="description" />
-        <meta content="TurkiyeSedafFinans" name="author" />
+        <meta content="ZeruitFinans" name="author" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
 
@@ -31,11 +31,11 @@
             <div class="container">
 
                 <a class="navbar-logo text-white" href="/" style="font-size:20px; font-weight:500">
-                    <span class="logo logo-light">TURKIYE <span style="color:#556EE6">SEDAF</span> FINANS</span>
+                    <span class="logo logo-light">ZERUIT FINANS</span>
                 </a>
 
                 <a class="navbar-logo text-dark " href="/" style="font-size:20px; font-weight:500">
-                    <span class="logo logo-dark">TURKIYE <span style="color:#556EE6">SEDAF</span> FINANS</span>
+                    <span class="logo logo-dark">ZERUIT FINANS</span>
                 </a>
 
                 <button type="button" class="btn btn-sm px-3 font-size-16 d-lg-none header-item waves-effect waves-light" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
@@ -187,11 +187,11 @@
                     <div class="col-lg-5">
 
                         <div class="text-muted">
-                            <h4>Turkiye <span style="color:#556EE6">Sedaf</span> Finans</h4>
+                            <h4>Zeruit Finans</h4>
                             <p>We offer you a secure bank account. We have been successfully involved in the business of arranging Offshore bank accounts and credit cards for years. We open many accounts every year and are intimately acquainted with the banking system all over the world.
                             </p>
                             <p>
-                                As Turkiye Sedaf Finans grows, it is maintaining its identity as a strong, full-service Offshore banking. We offer a range of checking and savings products for both consumer and business customers. Other popular products include competitive mortgages, home equity lines of credit and consumer and business loans. The Trust and Wealth Management division rounds out the financial offerings available for individuals, families and businesses.</p>
+                                As Zeruit Finans grows, it is maintaining its identity as a strong, full-service Offshore banking. We offer a range of checking and savings products for both consumer and business customers. Other popular products include competitive mortgages, home equity lines of credit and consumer and business loans. The Trust and Wealth Management division rounds out the financial offerings available for individuals, families and businesses.</p>
                             {{-- <p class="mb-4">It would be necessary to have uniform pronunciation.</p> --}}
 {{--
                             <div class="button-items">
@@ -383,7 +383,7 @@
                                     Turkey</p>
 
                                 <p class="card-title">Email</p>
-                                <p class="text-muted">support@turkiyesedeffinans.com</p>
+                                <p class="text-muted">support@zeruitfinans.com</p>
 
                             </div>
                         </div>
@@ -614,11 +614,11 @@
                     <div class="col-lg-6">
                         <div class="mb-4">
                             <a class="navbar-logo text-white" href="/" style="font-size:15px; font-weight:500">
-                                TURKIYE SEDAF FINANS
+                            ZERUIT FINANS
                             </a>
                         </div>
 
-                        <p class="mb-2"><script>document.write(new Date().getFullYear())</script> © Turkiye Sedaf Finans</p>
+                        <p class="mb-2"><script>document.write(new Date().getFullYear())</script> © Zeruit Finans</p>
 
                     </div>
 

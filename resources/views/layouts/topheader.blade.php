@@ -6,13 +6,13 @@
             <div class="navbar-brand-box">
                 <a href="index.html" class="logo logo-dark">
                     <a class="navbar-logo text-white d-block auth-logo mt-5" href="/" style="font-size:17px; font-weight:500">
-                        <span class="auth-logo-dark">TURKIYE <span style="color:#556EE6">SEDAF</span> FINANS</span>
+                        <span class="auth-logo-dark">ZERUIT FINANS</span>
                     </a>
                 </a>
 
                 <a href="index.html" class="logo logo-light">
                     <a class="navbar-logo text-dark d-block auth-logo mt-5" href="/" style="font-size:17px; font-weight:500">
-                        <span class="auth-logo-light">TURKIYE <span style="color:#556EE6">SEDAF</span> FINANS</span>
+                        <span class="auth-logo-light">ZERUIT FINANS</span>
                     </a>
                 </a>
             </div> --}}
